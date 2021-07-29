@@ -8,7 +8,8 @@ import Logo from './assets/spotify2019-830x350.jpg'
 import { useDataLayerValue } from './DataLayer'
 
 const Sidebar = () => {
-    const [{playlists}, dispatch] = useDataLayerValue()
+    const [{ playlist, playlists }, dispatch] = useDataLayerValue()
+    
     return (
         <div className="sidebar">
             <img src={Logo} className="sidebar_logo" alt="" />
@@ -18,9 +19,12 @@ const Sidebar = () => {
             <br />
             <strong className="sidebar_title" >PLAYLISTS</strong>
             <hr />
-            {playlists?.items?.map(playlist => (
-                <SidebarOption key={playlist.id} option={playlist.name} />
-            ))}
+            <div className="sidebar_playlists">                
+                {playlists?.items?.map(playlist => (
+                    <SidebarOption key={playlist.id} id={playlist.id} option={playlist.name} />
+                ))}
+            </div>
+            <img src={playlist?.images[0].url} alt="" className="sidebar_albumImg" />
         </div>
     )
 }

@@ -13,10 +13,10 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer_left">
-                <img src="" alt="" className="footer_albumLogo" />
+                <img src="https://i.scdn.co/image/ab67616d0000b2732bb07fe40f5e794d6a5d9ca9" alt="" className="footer_albumLogo" />
                 <div className="footer_songInfo">
-                    <h4>No song playing</h4>
-                    <p>...</p>
+                    <h4>Sad Cowboy</h4>
+                    <p>Goat Girl - On All Fours</p>
                 </div>
             </div>
             <div className="footer_center">

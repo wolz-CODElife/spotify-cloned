@@ -9,7 +9,7 @@ import { useDataLayerValue } from './DataLayer';
 const spotify = new SpotifyWebApi()
 
 function App() {
-  const [{user, token}, dispatch] = useDataLayerValue()
+  const [{playlist, user, token}, dispatch] = useDataLayerValue()
 
   useEffect(() => {
     const hash = getTokenFromUrl()
@@ -37,8 +37,8 @@ function App() {
       })
       spotify.getPlaylist('37i9dQZEVXcWqwwuTvQjwp').then((response) => {
         dispatch({
-          type: 'SET_DISCOVER_WEEKLY',
-          discover_weekly: response
+          type: 'SET_PLAYLIST',
+          playlist: response
         })
       })
     }

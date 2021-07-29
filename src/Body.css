@@ -1,9 +1,13 @@
 .body {
     flex: 0.8;
     padding: 30px;
-    height: 100vh;
+    height: 88vh;
     color: white;
+    overflow-y: overlay;
     background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+}
+.body::-webkit-scrollbar {
+    display: none;
 }
 .body_info {
     display: flex;
@@ -12,6 +16,7 @@
 }
 .body_info > img {
     height: 20vw;
+    max-height: 200px;
     margin: 0 20px;
     box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
 }
